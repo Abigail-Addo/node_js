@@ -1,0 +1,12 @@
+###
+GET http://localhost:4050/api
+
+
+###
+POST http://localhost:4050/api/auth
+Content-Type: application/json
+
+{
+    "email": "addoa350@gmail.com",
+   "password": "mainAdmin"
+}
