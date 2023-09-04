@@ -4,7 +4,7 @@
   "description": "This is my first node.js project",
   "main": "express.js",
   "scripts": {
-    "start": "express.js"
+    "start": "nodemon express.js"
   },
   "author": "Abigail",
   "license": "ISC",
