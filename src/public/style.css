@@ -102,6 +102,19 @@ button:hover {
 }
 
 
+.error {
+    display: none;
+    padding-left: 1.5rem;
+    transition: 2000ms ease-in-out;
+    width: 100%;
+    margin: 0 0 1rem;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 1rem;
+}
+
 
 @media only screen and (max-width: 768px) {
     main.wrapper {

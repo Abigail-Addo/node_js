@@ -1,13 +1,29 @@
 window.addEventListener('load', async () => {
   const login = document.querySelector('.submitUpdate');
 
-  login.addEventListener('click', async () => {
+  login.addEventListener('click', async (e) => {
+    e.preventDefault();
+
 
     const Usermail = document.querySelector('input#email').value;
     const Userpassword = document.querySelector('input#password').value;
 
+    const error = document.querySelector('.wrapper form div.error');
+    const message = document.querySelector('.wrapper form div.error .error-message');
+
     if (Usermail == '' || Usermail == null || Userpassword == '' || Userpassword == null) {
-      alert('please fill all fields')
+      $(error).fadeIn('slow');
+      $(message).text('Please enter your email and password');
+
+      setTimeout(() => {
+        $(error).fadeOut('slow');
+      }, 3000);
+      return;
+    }
+
+
+    if (Usermail == '' || Usermail == null || Userpassword == '' || Userpassword == null) {
+      alert('pPease fill all fields')
       return;
     }
 
@@ -27,7 +43,15 @@ window.addEventListener('load', async () => {
       console.log(response);
     } else {
       const response = await result.json();
-      console.log(response);
+      // console.log(response);
+
+      $(error).fadeIn('slow');
+      $(message).text(response.message);
+
+      setTimeout(() => {
+        $(error).fadeOut('slow');
+      }, 3000);
+      return;
     }
 
   })
