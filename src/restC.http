@@ -10,3 +10,8 @@ Content-Type: application/json
     "email": "addoa350@gmail.com",
    "password": "mainAdmin"
 }
+
+
+###
+POST  http://localhost:4050/api/logout
+Content-Type: application/json

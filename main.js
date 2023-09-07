@@ -9,11 +9,14 @@ app.use(cors({
     origin: '*',
 }));
 
+
 const path = require('path');
 app.use(express.static(path.join(__dirname, './src/public')));
 
 const routes = require('./src/routes/routes');
+// const auth = require('./src/routes/protectedRoute');
 app.use('/api', routes);
+// app.use('/api', auth);
 
 app.get('/', (req, res) => {
     res.sendFile('index.html', err => {

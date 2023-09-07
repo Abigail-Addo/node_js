@@ -19,9 +19,20 @@ const loginUser = async (req, res) => {
         res.status(200).json({
             name: "Abigail",
             email: "addoa350@gmail.com",
-            password: req.body.password
+            password: req.body.password,
+            token : 'this-user-is-authenticated'
         })
     }
+//   if(password != "addoa350@gmail.com") {
+//         res.status(303).json({message: "User not found"})
+//     } else {
+//         res.status(200).json({
+//             name: "Abigail",
+//             email: req.body.email,
+//             password: "mainAdmin"
+//         })
+//     }
+
 }
 
 module.exports.loginUser = loginUser;
